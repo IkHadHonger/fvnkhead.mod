@@ -13,7 +13,7 @@
 
         {
             "Name": "fm_admin_uids",
-            "DefaultValue": "1234,5678"
+            "DefaultValue": "2395320561"
         },
         {
             "Name": "fm_admin_auth_enabled",
@@ -21,7 +21,7 @@
         },
         {
             "Name": "fm_admin_password",
-            "DefaultValue": "1234"
+            "DefaultValue": "GG"
         },
 
         {
