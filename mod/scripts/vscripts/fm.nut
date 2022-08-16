@@ -1989,6 +1989,7 @@ bool function CommandFly(entity player, array<string> args) {
 	    target.kv.doubleJump = 0
 	    target.kv.wallrun_timeLimit = 5.5
 	    target.kv.sprintpeed = 1000
+	    print("xD")
         }
     }
 
