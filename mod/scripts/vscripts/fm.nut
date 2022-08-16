@@ -1954,10 +1954,13 @@ bool function CommandTank(entity player, array<string> args) {
 
     int health = 1000
     foreach (entity target in result.players) {
-        if (IsAlive(target)) {
-           // target.SetMaxHealth(health)
+        if (IsAlive(target) && !target.IsTitan()) {
+            //target.SetMaxHealth(health)
             //target.SetHealth(health)
-            GiveArmor( target, 100 )
+            int currentShieldHealth = target.GetShieldHealth()
+		    int currentMaxShieldHealth = target.GetShieldHealthMax()
+		    target.SetShieldHealth( min( 200, 100 + currentShieldHealth ) )
+		    target.SetShieldHealthMax( min( 200, 100 + currentMaxShieldHealth ) )
         }
     }
 
@@ -1978,7 +1981,8 @@ bool function CommandFly(entity player, array<string> args) {
 
     foreach (entity target in result.players) {
         if (IsAlive(target)) {
-            target.SetPhysics(MOVETYPE_NOCLIP)
+            //target.SetPhysics(MOVETYPE_NOCLIP)
+            player.kv.speed = 600
         }
     }
 
@@ -1996,7 +2000,8 @@ bool function CommandUnfly(entity player, array<string> args) {
 
     foreach (entity target in result.players) {
         if (IsAlive(target)) {
-            target.SetPhysics(MOVETYPE_WALK)
+            //target.SetPhysics(MOVETYPE_WALK)
+            player.kv.speed = player.GetPlayerSettingsField( "speed" )
         }
     }
 
