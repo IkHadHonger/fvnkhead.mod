@@ -1955,8 +1955,9 @@ bool function CommandTank(entity player, array<string> args) {
     int health = 1000
     foreach (entity target in result.players) {
         if (IsAlive(target)) {
-            target.SetMaxHealth(health)
-            target.SetHealth(health)
+           // target.SetMaxHealth(health)
+            //target.SetHealth(health)
+            GiveArmor( target, 100 )
         }
     }
 
