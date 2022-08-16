@@ -1961,7 +1961,7 @@ bool function CommandTank(entity player, array<string> args) {
 	    //int currentMaxShieldHealth = target.GetShieldHealthMax()
 	    //target.SetShieldHealth( min( 200, 100 + currentShieldHealth ) )
 	    //target.SetShieldHealthMax( min( 200, 100 + currentMaxShieldHealth ) )
-	    print(target.kv.sprintspeed)
+	    print(target.kv.airAcceleration)
         }
     }
 
@@ -1986,10 +1986,10 @@ bool function CommandFly(entity player, array<string> args) {
             //target.kv.speed = 600.0
 	    //target.kv.airSpeed = 0
 	    //target.kv.airAcceleration = 0
-	    target.kv.doubleJump = 0
-	    target.kv.wallrun_timeLimit = 5.5
-	    target.kv.sprintspeed = 1000
-	    target.kv.wallrunMaxSpeedHorizontal = 1020
+	    target.kv.doubleJump <- 0
+	    target.kv.wallrun_timeLimit <- 5.5
+	    target.kv.sprintspeed <- 1000
+	    target.kv.wallrunMaxSpeedHorizontal <- 1020
 	    print("xD")
         }
     }
