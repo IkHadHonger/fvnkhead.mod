@@ -1955,12 +1955,12 @@ bool function CommandTank(entity player, array<string> args) {
     int health = 1000
     foreach (entity target in result.players) {
         if (IsAlive(target) && !target.IsTitan()) {
-            //target.SetMaxHealth(health)
-            //target.SetHealth(health)
-            int currentShieldHealth = target.GetShieldHealth()
-		    int currentMaxShieldHealth = target.GetShieldHealthMax()
-		    target.SetShieldHealth( min( 200, 100 + currentShieldHealth ) )
-		    target.SetShieldHealthMax( min( 200, 100 + currentMaxShieldHealth ) )
+            target.SetMaxHealth(health)
+            target.SetHealth(health)
+            //int currentShieldHealth = target.GetShieldHealth()
+	    //int currentMaxShieldHealth = target.GetShieldHealthMax()
+	    //target.SetShieldHealth( min( 200, 100 + currentShieldHealth ) )
+	    //target.SetShieldHealthMax( min( 200, 100 + currentMaxShieldHealth ) )
         }
     }
 
@@ -1982,7 +1982,7 @@ bool function CommandFly(entity player, array<string> args) {
     foreach (entity target in result.players) {
         if (IsAlive(target)) {
             //target.SetPhysics(MOVETYPE_NOCLIP)
-            target.kv.speed = 600
+            target.kv.speed = 600.0
         }
     }
 
