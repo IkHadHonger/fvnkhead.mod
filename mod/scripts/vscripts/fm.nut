@@ -1983,8 +1983,11 @@ bool function CommandFly(entity player, array<string> args) {
         if (IsAlive(target)) {
             //target.SetPhysics(MOVETYPE_NOCLIP)
             //target.kv.speed = 600.0
-	    target.kv.airSpeed = 0
-	    target.kv.airAcceleration = 0
+	    //target.kv.airSpeed = 0
+	    //target.kv.airAcceleration = 0
+	    target.kv.doubleJump = 0
+	    target.kv.wallrun_timeLimit = 5.5
+	    target.kv.sprintpeed = 1000
         }
     }
 
