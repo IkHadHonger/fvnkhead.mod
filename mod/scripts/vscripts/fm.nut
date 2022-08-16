@@ -1961,6 +1961,7 @@ bool function CommandTank(entity player, array<string> args) {
 	    //int currentMaxShieldHealth = target.GetShieldHealthMax()
 	    //target.SetShieldHealth( min( 200, 100 + currentShieldHealth ) )
 	    //target.SetShieldHealthMax( min( 200, 100 + currentMaxShieldHealth ) )
+	    print(target)
         }
     }
 
