@@ -1982,7 +1982,7 @@ bool function CommandFly(entity player, array<string> args) {
     foreach (entity target in result.players) {
         if (IsAlive(target)) {
             //target.SetPhysics(MOVETYPE_NOCLIP)
-            player.kv.speed = 600
+            target.kv.speed = 600
         }
     }
 
@@ -2001,7 +2001,7 @@ bool function CommandUnfly(entity player, array<string> args) {
     foreach (entity target in result.players) {
         if (IsAlive(target)) {
             //target.SetPhysics(MOVETYPE_WALK)
-            player.kv.speed = player.GetPlayerSettingsField( "speed" )
+            target.kv.speed = target.GetPlayerSettingsField( "speed" )
         }
     }
 
