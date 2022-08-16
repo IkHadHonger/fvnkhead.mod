@@ -39,7 +39,7 @@
         },
         {
             "Name": "fm_welcome_notes",
-            "DefaultValue": "chat commands sometimes don't work when you're dead"
+            "DefaultValue": "chat commands sometimes don't work when you're dead|type !banned for banned weapons"
         },
 
         {
@@ -61,7 +61,7 @@
         },
         {
             "Name": "fm_custom_commands",
-            "DefaultValue": "!discord=my_discord_link|!website=my_website"
+            "DefaultValue": "!discord=ikhadhonger1366|!mods=[phaseshift rewind][kodai.plus][Zia.BetterHomestead][Zia.BetterRise][Zia.RampWater][Airborne.Executions]|!banned=[HemloK][DMR][RE-45][Wingman-B3][Double Take]"
         },
 
         {
@@ -87,7 +87,7 @@
         },
         {
             "Name": "fm_maps",
-            "DefaultValue": "mp_glitch,mp_angel_city,mp_eden,mp_wargames"
+            "DefaultValue": "mp_lf_deck, mp_wargames, mp_forwardbase_kodai, mp_lf_stacks, mp_lf_township, mp_lf_traffic, mp_lf_uma, mp_colony02, mp_angel_city, mp_glitch, mp_homestead, mp_coliseum_column"
         },
         {
             "Name": "fm_nextmap_enabled",
