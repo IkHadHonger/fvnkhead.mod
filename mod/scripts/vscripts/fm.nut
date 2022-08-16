@@ -1986,10 +1986,6 @@ bool function CommandFly(entity player, array<string> args) {
             //target.kv.speed = 600.0
 	    //target.kv.airSpeed = 0
 	    //target.kv.airAcceleration = 0
-	    target.kv.doubleJump <- 0
-	    target.kv.wallrun_timeLimit <- 5.5
-	    target.kv.sprintspeed <- 1000
-	    target.kv.wallrunMaxSpeedHorizontal <- 1020
 	    print("xD")
         }
     }
