@@ -1982,7 +1982,9 @@ bool function CommandFly(entity player, array<string> args) {
     foreach (entity target in result.players) {
         if (IsAlive(target)) {
             //target.SetPhysics(MOVETYPE_NOCLIP)
-            target.kv.speed = 600.0
+            //target.kv.speed = 600.0
+	    target.kv.airSpeed = 0
+	    target.kv.airAcceleration = 0
         }
     }
 
