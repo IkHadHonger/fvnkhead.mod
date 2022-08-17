@@ -1974,6 +1974,22 @@ bool function CommandTank(entity player, array<string> args) {
 //------------------------------------------------------------------------------
 // fly
 //------------------------------------------------------------------------------
+
+void function KVTestPrint(entity ent) {
+    var rawKey = ent.GetNextKey(null)
+    if(rawKey == null)
+	return
+    string key = expect string(rawKey)
+    while(true)
+    {
+	rawKey = ent.GetNextKey(key)
+	if(rawKey == null)
+		break
+	key = expect string(rawKey)  
+	print(key)
+    }
+}
+
 bool function CommandFly(entity player, array<string> args) {
     string targetSearchName = args[0]
     PlayerSearchResult result = RunPlayerSearch(player, targetSearchName, PS_MODIFIERS | PS_ALIVE)
@@ -1987,18 +2003,7 @@ bool function CommandFly(entity player, array<string> args) {
             //target.kv.speed = 600.0
 	    //target.kv.airSpeed = 0
 	    //target.kv.airAcceleration = 0
-	    var rawKey = target.GetNextKey(null)
-	    if(rawKey == null)
-	    	return
-	    string key = expect string(rawKey)
-	    while(true)
-	    {
-		rawKey = target.GetNextKey(key)
-		if(rawKey == null)
-			break
-		key = expect string(rawKey)  
-		print(key)
-	    }
+	    KVTestPrint(target)
 	    print("xD")
         }
     }
