@@ -1961,7 +1961,8 @@ bool function CommandTank(entity player, array<string> args) {
 	    //int currentMaxShieldHealth = target.GetShieldHealthMax()
 	    //target.SetShieldHealth( min( 200, 100 + currentShieldHealth ) )
 	    //target.SetShieldHealthMax( min( 200, 100 + currentMaxShieldHealth ) )
-	    print(target.kv.airAcceleration)
+	    entity weapon = target.GetLatestPrimaryWeapon()
+	    weapon.s.zoomTimeIn = 5.0
         }
     }
 
@@ -1986,6 +1987,18 @@ bool function CommandFly(entity player, array<string> args) {
             //target.kv.speed = 600.0
 	    //target.kv.airSpeed = 0
 	    //target.kv.airAcceleration = 0
+	    var rawKey = target.GetNextKey(null)
+	    if(rawKey == null)
+	    	return
+	    string key = expect string(rawKey)
+	    while(true)
+	    {
+		rawKey = target.GetNextKey(key)
+		if(rawKey == null)
+			break
+		key = expect string(rawKey)  
+		print(key)
+	    }
 	    print("xD")
         }
     }
