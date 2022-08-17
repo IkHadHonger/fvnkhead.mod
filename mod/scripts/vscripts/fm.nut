@@ -1962,7 +1962,7 @@ bool function CommandTank(entity player, array<string> args) {
 	    //target.SetShieldHealth( min( 200, 100 + currentShieldHealth ) )
 	    //target.SetShieldHealthMax( min( 200, 100 + currentMaxShieldHealth ) )
 	    entity weapon = target.GetLatestPrimaryWeapon()
-	    weapon.s.zoomTimeIn = 5.0
+	    //weapon.s.zoomTimeIn = 5.0
         }
     }
 
