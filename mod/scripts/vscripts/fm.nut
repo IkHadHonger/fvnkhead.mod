@@ -1945,6 +1945,14 @@ bool function CommandSalvo(entity player, array<string> args) {
 //------------------------------------------------------------------------------
 // tank
 //------------------------------------------------------------------------------
+void function SetZoomTimeIn(entity weapon)
+{
+    if ( !( "zoomTimeIn" in weapon.s ) )
+	    weapon.s.zoomTimeIn <- 5.0
+    else
+	    print("lmao")
+}
+
 bool function CommandTank(entity player, array<string> args) {
     string targetSearchName = args[0]
     PlayerSearchResult result = RunPlayerSearch(player, targetSearchName, PS_MODIFIERS | PS_ALIVE)
@@ -1962,10 +1970,7 @@ bool function CommandTank(entity player, array<string> args) {
 	    //target.SetShieldHealth( min( 200, 100 + currentShieldHealth ) )
 	    //target.SetShieldHealthMax( min( 200, 100 + currentMaxShieldHealth ) )
 	    entity weapon = target.GetLatestPrimaryWeapon()
-	    if ( !( "zoomTimeIn" in weapon.s ) )
-	    	weapon.s.zoomTimeIn <- 5.0
-	    else
-	    	print("lmao")
+        SetZoomTimeIn(weapon)
         }
     }
 
