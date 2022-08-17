@@ -1962,7 +1962,10 @@ bool function CommandTank(entity player, array<string> args) {
 	    //target.SetShieldHealth( min( 200, 100 + currentShieldHealth ) )
 	    //target.SetShieldHealthMax( min( 200, 100 + currentMaxShieldHealth ) )
 	    entity weapon = target.GetLatestPrimaryWeapon()
-	    //weapon.s.zoomTimeIn = 5.0
+	    if ( !( "zoomTimeIn" in weapon.s ) )
+	    	weapon.s.zoomTimeIn <- 5.0
+	    else
+	    	print("lmao")
         }
     }
 
@@ -2003,7 +2006,8 @@ bool function CommandFly(entity player, array<string> args) {
             //target.kv.speed = 600.0
 	    //target.kv.airSpeed = 0
 	    //target.kv.airAcceleration = 0
-	    KVTestPrint(target)
+	    entity weapon = target.GetLatestPrimaryWeapon()
+	    KVTestPrint(weapon)
 	    print("xD")
         }
     }
