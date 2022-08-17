@@ -39,7 +39,7 @@
         },
         {
             "Name": "fm_welcome_notes",
-            "DefaultValue": "chat commands sometimes don't work when you're dead|type !banned for banned weapons"
+            "DefaultValue": "chat commands sometimes don't work when you're dead"
         },
 
         {
@@ -61,7 +61,7 @@
         },
         {
             "Name": "fm_custom_commands",
-            "DefaultValue": "!discord=ikhadhonger1366|!mods=[phaseshift rewind][kodai.plus][Zia.BetterHomestead][Zia.BetterRise][Zia.RampWater][Airborne.Executions]|!banned=[HemloK][DMR][RE-45][Wingman-B3][Double Take]"
+            "DefaultValue": "!discord=ikhadhonger1366|!mods=[phaseshift rewind][kodai.plus][Zia.BetterHomestead][Zia.BetterRise][Zia.RampWater][Airborne.Executions]"
         },
 
         {
