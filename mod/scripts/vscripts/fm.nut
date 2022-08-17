@@ -1949,8 +1949,10 @@ void function SetZoomTimeIn(entity weapon)
 {
     if ( !( "s" in weapon ) )
 	    print("what")
-    else
+    else {
 	    print("lmao")
+		weapon.s.zoomTimeIn <- weapon.GetWeaponSettingFloat( eWeaponVar.zoom_time_in )
+    }
 }
 
 bool function CommandTank(entity player, array<string> args) {
