@@ -1947,8 +1947,8 @@ bool function CommandSalvo(entity player, array<string> args) {
 //------------------------------------------------------------------------------
 void function SetZoomTimeIn(entity weapon)
 {
-    if ( !( "zoomTimeIn" in weapon.s ) )
-	    weapon.s.zoomTimeIn <- 5.0
+    if ( !( "s" in weapon ) )
+	    print("what")
     else
 	    print("lmao")
 }
